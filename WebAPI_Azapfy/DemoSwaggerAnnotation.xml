@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebAPI_Azapfy</name>
+    </assembly>
+    <members>
+        <member name="M:WebAPI_Azapfy.Controllers.NotaController.GetAllNotas">
+            <summary>
+            Lista todas as notas fornecida pela api externa.
+            </summary>
+            <returns>Objeto Json</returns>
+        </member>
+        <member name="M:WebAPI_Azapfy.Controllers.NotaController.GetNotasAgrupadas">
+            <summary>
+            Lista as notas agrupadas pelo remetente.
+            </summary>
+            <returns>Objeto Json</returns>
+        </member>
+        <member name="M:WebAPI_Azapfy.Controllers.NotaController.GetAllNotasEntregueSemAtraso">
+            <summary>
+            Lista todas as notas que foram entregues sem atraso
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI_Azapfy.Controllers.NotaController.GetNotasPendentes">
+            <summary>
+            Lista todas as notas que não foram entregues 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI_Azapfy.Controllers.NotaController.GetNotasEntregaAtrasada">
+            <summary>
+            Lista todas as notas que foram entregues, mas com atraso
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI_Azapfy.Controllers.NotaController.GetVlTotalNotasRemetente">
+            <summary>
+            Retorna o valor total das notas por remetente
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI_Azapfy.Controllers.NotaController.GetNotasVlTotalEntregue">
+            <summary>
+            Retona o valor total das notas que foram entregue dentro do prazo por remetente
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI_Azapfy.Controllers.NotaController.GetNotasVlTotalPendentes">
+            <summary>
+            Retorna o valor total das notas que o remetente irá receber pelo que ainda não foi entregue 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI_Azapfy.Controllers.NotaController.GetNotasVlTotalAtrasada">
+            <summary>
+            Retorna o valor total das notas que o remetente o remetente deixou de receber devido ao atraso na entrega 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI_Azapfy.Services.NotaService.CalcularValorTotalPorRemetente(System.Collections.Generic.IEnumerable{WebAPI_Azapfy.Models.Nota},WebAPI_Azapfy.Models.Nota[])">
+            <summary>
+            Calcular os valores e agrupar por remetente contidos na lista de notas disponibilzados pela API externa.
+            </summary>
+            <param name="lstNotas">lista de notas que foram modificadas por alguma validação</param>
+            <param name="notasApi">lista de notas disponibilzados pela API externa </param>
+            <returns>lista de notas agrupadas por remetente e seus valores totais</returns>
+        </member>
+    </members>
+</doc>

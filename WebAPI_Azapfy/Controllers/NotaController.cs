@@ -18,6 +18,10 @@ namespace WebAPI_Azapfy.Controllers
             _notaService = notaService;
         }
 
+        /// <summary>
+        /// Lista todas as notas fornecida pela api externa.
+        /// </summary>
+        /// <returns>Objeto Json</returns>
         [HttpGet("notas")]
         public async Task<IActionResult> GetAllNotas()
         {
@@ -33,6 +37,10 @@ namespace WebAPI_Azapfy.Controllers
             }
         }
 
+        /// <summary>
+        /// Lista as notas agrupadas pelo remetente.
+        /// </summary>
+        /// <returns>Objeto Json</returns>
         [HttpGet("notas/agrupadas/remetente")]
         public async Task<IActionResult> GetNotasAgrupadas()
         {
@@ -48,6 +56,10 @@ namespace WebAPI_Azapfy.Controllers
             }
         }
 
+        /// <summary>
+        /// Lista todas as notas que foram entregues sem atraso
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("notas/entregue")]
         public async Task<IActionResult> GetAllNotasEntregueSemAtraso()
         {
@@ -62,6 +74,10 @@ namespace WebAPI_Azapfy.Controllers
             }
         }
 
+        /// <summary>
+        /// Lista todas as notas que não foram entregues 
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("notas/entrega/pendente")]
         public async Task<IActionResult> GetNotasPendentes()
         {
@@ -77,6 +93,10 @@ namespace WebAPI_Azapfy.Controllers
 
         }
 
+        /// <summary>
+        /// Lista todas as notas que foram entregues, mas com atraso
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("notas/entrega/atrasada")]
         public async Task<IActionResult> GetNotasEntregaAtrasada()
         {
@@ -92,6 +112,10 @@ namespace WebAPI_Azapfy.Controllers
 
         }
 
+        /// <summary>
+        /// Retorna o valor total das notas por remetente
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("notas/vltotal/rementente")]
         public async Task<IActionResult> GetVlTotalNotasRemetente()
         {
@@ -107,6 +131,10 @@ namespace WebAPI_Azapfy.Controllers
 
         }
 
+        /// <summary>
+        /// Retona o valor total das notas que foram entregue dentro do prazo por remetente
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("notas/vltotal/entregue")]
         public async Task<IActionResult> GetNotasVlTotalEntregue()
         {
@@ -124,6 +152,10 @@ namespace WebAPI_Azapfy.Controllers
 
         }
 
+        /// <summary>
+        /// Retorna o valor total das notas que o remetente irá receber pelo que ainda não foi entregue 
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("notas/vltotal/pendentes")]
         public async Task<IActionResult> GetNotasVlTotalPendentes()
         {
@@ -138,6 +170,10 @@ namespace WebAPI_Azapfy.Controllers
             }
         }
 
+        /// <summary>
+        /// Retorna o valor total das notas que o remetente o remetente deixou de receber devido ao atraso na entrega 
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("notas/vltotal/atrasada")]
         public async Task<IActionResult> GetNotasVlTotalAtrasada()
         {
