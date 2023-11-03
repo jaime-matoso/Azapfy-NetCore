@@ -37,7 +37,7 @@ A API será iniciada
 Acesse o pela url abaixo em seu navegador para ter acesso a documentação
 
 ```
-[http://localhost:3001](http://localhost:3001/swagger)
+http://localhost:3001/swagger
 ```
 
 ---
